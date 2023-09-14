@@ -15,5 +15,7 @@ int main ()
 	//if the value is 0 (or whatever we state as starting point) then it is balenced and we printf so along with the output
 	// at some point we need to ask the user to enter 6 paranthesis at random and then run the program and output correct result
 	
+	//this is to test commit for github
+	
 
 }
