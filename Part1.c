@@ -7,10 +7,14 @@
 int main () 
 {
 
-	char arr[] = {"{", "}"};
+	char arr1[2] = {'{','}'};
 	int balencePoint = 0;
 	
-	printf("test output: %s" , string );
+	printf("test output: ");
+	
+	for (int i = 0; i < 2; i++){
+	printf("%c" ,  arr1[i]);
+	}
 	//need to take string of parenthesis to be array we can scan
 
 	//need to have a varible that hold a value, the value changes based on what is read
