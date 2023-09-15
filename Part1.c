@@ -1,30 +1,84 @@
 #include <stdio.h>
 #include <string.h>
 
+	int MAX = 6;
+	char stack[6];
+	int top = -1;
+
+
+
+	int isEmpty()
+	{
+		if (top == -1)
+			return 1;
+		return 0;
+	}
+	
+	int isFull()
+	{
+		if(top == MAX)
+			return 1;
+		return 0;			
+	}
+	
+	int peek() 
+	{
+		if (isEmpty())
+			printf("Cold not retrieve, Stack is empty\n");
+		else
+			return stack[top];
+	}
+	
+	int pop()
+	{
+		int data;
+		if (!isEmpty())
+		{
+			data = stack[top];
+			top = top - 1;
+			return data;
+		} else {
+			printf("Could not retrieve, Stack is empty\n");
+		}
+	}	
+	
+	int push(int data)
+	{
+		if(!isFull())
+		{
+			top = top + 1;
+			stack[top] = data;
+		} else {
+			printf("Could not retrieve, Stack is full\n");
+		}
+	}
 //assignment is to take a sting of 6 paranthesis and output whether or not the paranthesisare "balenced" or not.
 //such as "{}" is balenced and "{{" in not
 
 int main () 
 {
 	
-	int MAX = 6;
-	char stack[MAX];
-	int top = -1;
-	char arr2[MAX];
-	//char arr1[2] = {'{','}'};
-	//int balencePoint = 0;
+	char arr1[MAX];
 	
 	printf("Enter 6 paranthesis then press ENTER: ");
 	
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < MAX; i++)
 	{
-		scanf("%c, ", &(arr2[i]));
+		scanf("%c, ", &(arr1[i]));
 	}
 	
-	for (int i = 0; i < 6; i++)
+	
+	for (int i = 0; i < MAX; i++)
 	{
-		printf("%c, ", arr2[i]);
+		printf("%c, ", arr1[i]);
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	//printf("test output: ");
 	
